@@ -250,6 +250,8 @@ hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 -- Frequently used programs
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd("firefox"))
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("vscodium"))
+hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("thunderbird"))
+hl.bind(mainMod .. " + G", hl.dsp.exec_cmd("steam"))
 
 -- Screen Lock
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))

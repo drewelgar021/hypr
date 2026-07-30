@@ -27,7 +27,7 @@ local menu        = "hyprlauncher"
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function ()
-    hl.exec_cmd("waybar & hyprpaper & hyprsunset & swaync & pcloud &")
+    hl.exec_cmd("waybar & hyprpaper & hyprsunset & swaync & pcloud & nm-applet")
     hl.exec_cmd("systemctl --user start hyprpolkitagent &")
 end)
 
@@ -260,6 +260,8 @@ hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. "+ S", hl.dsp.exec_cmd("hyprshot -m window --clipboard-only"));
 hl.bind(mainMod .. "+ SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"));
 
+-- Notification Center
+hl.bind(mainMod .. "+ N", hl.dsp.exec_cmd("swaync-client -t -sw"));
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
